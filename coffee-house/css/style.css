@@ -1,3 +1,60 @@
-h1{
+*{
+    box-sizing: border-box
+}
+
+body{
+    background-color: #E1D4C9;
     font-family: 'Inter', sans-serif;
+}
+
+
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.header{
+    margin: 20px 0;
+}
+
+.header-items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    padding: 0;
+    
+}
+
+.header-nav__link{
+    text-decoration: none;
+    color: #403F3D;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.header-menu{
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    height: max-content;
+    padding-top: 15px;
+}
+
+.header-menu__icon{
+    align-self: baseline;
+}
+
+.header-menu__link{
+    text-decoration: none;
+    color: #403F3D;
+    font-size: 16px;
+    font-weight: 600;
 }
