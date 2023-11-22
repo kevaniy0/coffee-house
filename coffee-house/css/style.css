@@ -312,3 +312,142 @@ body{
     transform: scale(1);
     transition: transform 0.3s linear;
 }
+
+.section-mobile{
+    display: flex;
+    gap: 100px;
+}
+
+.mobile-app-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 38px;
+}
+
+.mobile-title{
+    padding: 0;
+    margin: 0;
+    color: #403F3D;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.mobile-span{
+    font-style: italic;
+    color: #B0907A;
+}
+
+.mobile-descripton{
+    padding: 0;
+    margin: 0;
+    color: #403F3D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    /* margin-top: 40px; */
+    /* margin-bottom: 37px; */
+}
+
+.mobile-links-wrapper{
+    display: flex;
+    gap: 18px;
+    
+}
+
+.apple-wrapper-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 8px;
+    border: 1px solid #665F55;
+    border-radius: 100px;
+    padding: 12px 59px 12px 20px;
+    transition: background-color 0.3s linear;
+}
+
+.apple-available{
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 140%;
+    color: #403F3D;
+    transition: color 0.3s linear;
+}
+
+.apple-store{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 600;
+    color: #403F3D;
+    transition: color 0.3s linear;
+}
+
+.google-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 8px;
+    border: 1px solid #665F55;
+    border-radius: 100px;
+    padding: 12px 44px 12px 20px;
+    transition: background-color 0.3s linear; 
+}
+
+.google-available{
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 140%;
+    color: #403F3D;
+    transition: color 0.3s linear;
+}
+
+.google-play{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 600;
+    color: #403F3D;
+    transition: color 0.3s linear;
+}
+
+.google-link:hover, .apple-wrapper-link:hover{
+    background-color: #665F55;
+}
+
+.google-link:hover .google-available, .google-link:hover .google-play{
+    color: #E1D4C9;
+}
+
+
+
+.apple-wrapper-link:hover .apple-available, .apple-wrapper-link:hover .apple-store{
+    color: #E1D4C9;
+    transition: color 0.3s linear;
+}
+
+svg path{
+    transition: fill 0.3s linear;
+}
+
+.google-link:hover svg path{
+    fill: #E1D4C9;
+    transition: fill 0.3s linear;
+}
+
+.apple-wrapper-link:hover svg path{
+    fill: #E1D4C9;
+    transition: fill 0.3s linear;
+}
+
+.mobile-img{
+    max-width: 630px;
+    max-height: 630px;
+}
