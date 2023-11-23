@@ -35,12 +35,29 @@ body{
     
 }
 
+
 .header-nav__link{
     text-decoration: none;
     color: #403F3D;
     font-size: 16px;
     font-weight: 600;
+    width: max-content;
     line-height: 24px;
+}
+
+.header-nav__link::after{
+    display: block;
+    content: "";
+    width: 0;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #403F3D;
+    transition: width 0.3s linear;
+}
+
+.header-nav__link:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;
 }
 
 .header-menu{
@@ -112,11 +129,35 @@ body{
     border-radius: 100px;
     width: max-content;
     padding: 23px 78px;
-    /* line-height: 22px; */
     cursor: pointer;
+    width: 199px;
     font-size: 16px;
     font-weight: 600;
+    position: relative;
+    transition: padding-left 0.3s linear;
 }
+
+.section-title__btn::after{
+    /* display: none; */
+    content: url(../img/coffee-cup.svg);
+    position: absolute;
+    top: 32%;
+    left: 60%;
+    opacity: 0;
+    transition: opacity 0.3s linear ;
+}
+.section-title__btn:hover::after{
+    /* display: block; */
+    opacity: 1;
+    transition: opacity 0.3s linear ;
+}
+.section-title__btn:hover{
+    width: 199px;
+    padding-left: 60px;
+    transition: padding-left 0.3s linear;
+}
+
+
 
 .section-favorite{
     margin-top: 100px;
@@ -205,7 +246,8 @@ body{
     border: 1px solid #665F55;
     background-color: transparent;
     cursor: pointer;
-    top: 50.7%;/
+    top: 50.7%;
+    transition: background-color 0.3s linear;
 }
 
 .slider-button-left{
@@ -216,8 +258,23 @@ body{
     right: 0.4%;
 }
 
+.slider-button svg path{
+    transition: stroke 0.3s linear;
+}
+
+
+.slider-button:hover{
+    background-color: #665F55;
+    transition: background-color 0.3s linear;
+}
+
+.slider-button:hover svg path{
+    stroke: #E1D4C9;
+    transition: stroke 0.3s linear;
+};
+
 .section-about{
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     overflow: hidden;
 }
 
@@ -316,6 +373,7 @@ body{
 }
 
 .section-mobile{
+    margin-top: 100px;
     display: flex;
     gap: 100px;
     margin-bottom: 95px;
@@ -342,15 +400,13 @@ body{
     color: #B0907A;
 }
 
-.mobile-descripton{
+.mobile-description{
     padding: 0;
     margin: 0;
     color: #403F3D;
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
-    /* margin-top: 40px; */
-    /* margin-bottom: 37px; */
 }
 
 .mobile-links-wrapper{
@@ -450,14 +506,11 @@ svg path{
     transition: fill 0.3s linear;
 }
 
-.mobile-photo{
-    /* overflow: hidden; */
-}
+
 
 .mobile-img{
     max-width: 630px;
     max-height: 630px;
-    /* width: 100%; */
 }
 
 .footer-wrapper{
@@ -562,6 +615,7 @@ svg path{
     display: block;
     content: "";
     height: 2px;
+    margin: 0 auto;
     width: 0px;
     background-color: #E1D4C9;
     transition: width 0.3s linear;
