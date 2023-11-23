@@ -61,23 +61,45 @@ body{
 }
 
 .header-menu{
-    display: flex;
-    gap: 8px;
-    align-items: baseline;
-    height: max-content;
-    padding-top: 15px;
+    align-self: center;
+    /* margin-right: 28px; */
+    position: relative;
 }
 
-.header-menu__icon{
-    align-self: baseline;
-}
 
 .header-menu__link{
+    display: block;
+    width: 72px;
+    position: relative;
     text-decoration: none;
     color: #403F3D;
     font-size: 16px;
     font-weight: 600;
 }
+
+.header-menu__link::before{
+    content: url(../img/coffee-cup.svg);
+    position: absolute;
+    left: 51px;
+    top: -4px;
+}
+
+.header-menu__link::after{
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 2px;
+    background-color: #403F3D;
+    transition: width 0.3s linear;
+}
+
+.header-menu__link:hover::after{
+    width: 70px;
+    transition: width 0.3s linear;
+}
+
+
 
 .header-logo{
     height: 60px;
@@ -281,14 +303,13 @@ body{
 .about-title{
     margin: 0;
     padding: 0;
-    font-size: 60px;
+    font-size: 59.9px;
     font-weight: 600;
     line-height: 125%;
     color: #403F3D;
     box-sizing: content-box;
     width: 100%;
-   margin-bottom: 40px;
-
+    margin-bottom: 40px;
 }
 
 .about-span{
@@ -297,7 +318,7 @@ body{
 }
 
 .relax-span{
-    word-spacing: -4px;
+    /* word-spacing: -4px; */
 }
 
 .about-photos{
