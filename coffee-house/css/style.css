@@ -218,6 +218,7 @@ body{
 
 .section-about{
     margin-bottom: 100px;
+    overflow: hidden;
 }
 
 .about-title{
@@ -230,6 +231,7 @@ body{
     box-sizing: content-box;
     width: 100%;
    margin-bottom: 40px;
+
 }
 
 .about-span{
@@ -316,6 +318,7 @@ body{
 .section-mobile{
     display: flex;
     gap: 100px;
+    margin-bottom: 95px;
 }
 
 .mobile-app-title{
@@ -447,7 +450,127 @@ svg path{
     transition: fill 0.3s linear;
 }
 
+.mobile-photo{
+    /* overflow: hidden; */
+}
+
 .mobile-img{
     max-width: 630px;
     max-height: 630px;
+    /* width: 100%; */
 }
+
+.footer-wrapper{
+    padding: 100px;
+    background-color: #665F55;
+    border-radius: 40px;
+    display: flex;
+    gap: 100px;
+    margin-bottom: 40px;
+}
+
+.footer-title{
+    padding: 0;
+    margin: 0;
+    color: #E1D4C9;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%;
+    max-width: 530px;
+}
+
+.footer-span{
+    color: #B0907A;
+    font-style: italic;
+}
+
+.footer-socials{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+}
+
+.contacts-title{
+    padding: 0;
+    margin: 0;
+    color: #E1D4C9;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.socials-icons{
+    display: flex;
+    gap: 10px;
+}
+
+.socials-icons__item{
+    text-decoration: none;
+    border: 1px solid #C1B6AD;
+    border-radius: 100px;
+    padding: 18px 18px 12px;
+    transition: background-color 0.3s linear;
+}
+
+.socials-icons__item svg path{
+    transition: stroke 0.3s linear;
+}
+
+.contacts-info{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+
+
+
+.contacts-info__link{
+    text-decoration: none;
+    color: #E1D4C9;
+    font-size: 16px;
+    font-weight: 600;
+    width: max-content;
+}
+
+.contacts-info__link svg{
+    margin-right: 4px;
+}
+
+.address-span{
+    word-spacing: 3px;
+}
+
+.socials-icons__item:hover{
+    background-color: #E1D4C9;
+    transition: background-color 0.3s linear;
+}
+
+.socials-icons__item:hover svg path{
+   stroke: #403F3D;
+   transition: stroke 0.3s linear;
+}
+
+.contacts-info__link::after{
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0px;
+    background-color: #E1D4C9;
+    transition: width 0.3s linear;
+}
+
+.contacts-info__link:hover::after{
+    display: block;
+    width: 100%;
+    transition: width 0.3s linear
+}
+
+
