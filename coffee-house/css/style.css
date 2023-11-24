@@ -647,7 +647,7 @@ svg path{
 }
 
 .section-menu-title{
-    margin-bottom: 40px;
+    margin-bottom: 38px;
 }
 
 .menu-title{
@@ -760,4 +760,74 @@ svg path{
 .btn-coffee-active .coffee-icon, .btn-tea-active .tea-icon, .btn-dessert-active .dessert-icon {
     transition: background-color 0.3s linear;
     background-color: #E1D4C9;
+}
+
+.section-menu-gallery{
+    margin-bottom: 98px;
+}
+
+.menu-coffee-wrapper{
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.menu-coffee_img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    transition: transform 0.3s linear;
+}
+
+.menu-coffee__item:hover .menu-coffee_img{
+    transform: scale(1);
+    transition: transform 0.3s linear;
+}
+
+.menu-coffee-description{
+    max-width: 310px;
+    height: 196px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.coffee-title-h3{
+    padding: 0;
+    margin: 0;
+    color: #403F3D;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 125%;
+    margin-bottom: 12px;
+}
+
+.coffee-description{
+    margin: 0;
+    padding: 0;
+    color: #403F3D;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: auto;
+}
+
+.coffee-price{
+    font-size: 24px;
+    color: #403F3D;
+    font-weight: 600;
+    line-height: 125%; 
+}
+
+.menu-coffee__item{
+    border: 1px solid #C1B6AD;
+    border-radius: 40px;
+}
+
+.menu-coffee{
+    display: grid;
+    grid-template-columns: repeat(4, 310px);
+    gap: 38px 40px;
 }
