@@ -685,6 +685,7 @@ svg path{
     font-size: 16px;
     line-height: 150%;
     font-weight: 600;
+    transition: color 0.3s linear, background-color 0.3s linear;
 }
 
 .btn-coffee{
@@ -696,7 +697,9 @@ svg path{
     font-size: 16px;
     line-height: 150%;
     font-weight: 600;
+    
 }
+
 
 .coffee-icon{
     position: absolute;
@@ -705,6 +708,7 @@ svg path{
     background-color: #C1B6AD;
     padding: 7px;
     border-radius: 100px;
+    transition: background-color 0.3s linear;
 }
 
 .tea-icon{
@@ -714,6 +718,7 @@ svg path{
     background-color: #C1B6AD;
     padding: 7px;
     border-radius: 100px;
+    transition: background-color 0.3s linear;
 }
 
 .dessert-icon{
@@ -723,6 +728,7 @@ svg path{
     background-color: #C1B6AD;
     padding: 7px;
     border-radius: 100px;
+    transition: background-color 0.3s linear;
 }
 
 .menu-page__link{
@@ -732,4 +738,26 @@ svg path{
     position: absolute;
     top: 21px;
     width: 72px;
+}
+
+.btn-coffee:hover, .btn-tea:hover, .btn-dessert:hover{
+    transition: color 0.3s linear, background-color 0.3s linear;
+    background-color: #665F55;
+    color: #E1D4C9;
+}
+
+.btn-coffee:hover .coffee-icon, .btn-tea:hover .tea-icon, .btn-dessert:hover .dessert-icon{
+    transition: background-color 0.3s linear;
+   background-color: #E1D4C9;
+}
+
+.btn-coffee-active, .btn-tea-active,.btn-dessert-active {
+    transition: color 0.3s linear, background-color 0.3s linear;
+    background-color: #665F55;
+    color: #E1D4C9;
+}
+
+.btn-coffee-active .coffee-icon, .btn-tea-active .tea-icon, .btn-dessert-active .dessert-icon {
+    transition: background-color 0.3s linear;
+    background-color: #E1D4C9;
 }
