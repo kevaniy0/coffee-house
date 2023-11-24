@@ -53,6 +53,7 @@ body{
     margin: 0 auto;
     background-color: #403F3D;
     transition: width 0.3s linear;
+    
 }
 
 .header-nav__link:hover::after{
@@ -99,8 +100,6 @@ body{
     transition: width 0.3s linear;
 }
 
-
-
 .header-logo{
     height: 60px;
 }
@@ -146,6 +145,8 @@ body{
 }
 
 .section-title__btn{
+    text-decoration: none;
+    color: #403F3D;
     background-color: #E1D4C9;
     border: none;
     border-radius: 100px;
@@ -618,9 +619,6 @@ svg path{
     margin-right: 4px;
 }
 
-.address-span{
-    word-spacing: 3px;
-}
 
 .socials-icons__item:hover{
     background-color: #E1D4C9;
@@ -648,4 +646,90 @@ svg path{
     transition: width 0.3s linear
 }
 
+.section-menu-title{
+    margin-bottom: 40px;
+}
 
+.menu-title{
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%;
+    color: #403F3D;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-span{
+    font-style: italic;
+    color: #B0907A;
+}
+
+.menu-tabs{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.tabs-btn{
+    cursor: pointer;
+    border-radius: 100px;
+    padding: 11px 16px 11px 46px;
+    background-color: transparent;
+    border: 1px solid #C1B6AD;
+    position: relative;
+    color: #403F3D;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 600;
+}
+
+.btn-coffee{
+    padding: 11px 16px 11px 46px;
+    background-color: transparent;
+    border: 1px solid #C1B6AD;
+    position: relative;
+    color: #403F3D;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 600;
+}
+
+.coffee-icon{
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    background-color: #C1B6AD;
+    padding: 7px;
+    border-radius: 100px;
+}
+
+.tea-icon{
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    background-color: #C1B6AD;
+    padding: 7px;
+    border-radius: 100px;
+}
+
+.dessert-icon{
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    background-color: #C1B6AD;
+    padding: 7px;
+    border-radius: 100px;
+}
+
+.menu-page__link{
+    pointer-events: none;
+}
+.menu-page__link::after{
+    position: absolute;
+    top: 21px;
+    width: 72px;
+}
