@@ -852,3 +852,7 @@ svg path{
 .schedule-link:hover{
    cursor: default;
 }
+
+.tabs-btn.btn-coffee-active{
+    pointer-events: none;
+}
