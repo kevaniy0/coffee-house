@@ -58,10 +58,6 @@ body{
     
 }
 
-.header-nav__link:hover::after{
-    width: 100%;
-    transition: width 0.3s linear;
-}
 
 .header-menu{
     align-self: center;
@@ -100,12 +96,7 @@ body{
     opacity: 0;
 }
 
-.header-menu__link:hover::after{
-    width: 70px;
-    opacity: 1;
-    left: 0;
-    transition: width 0.3s linear, left 0.3s linear, opacity 0.1s linear;
-}
+
 
 .header-logo{
     height: 60px;
@@ -176,16 +167,6 @@ body{
     opacity: 0;
     transition: opacity 0.3s linear ;
 }
-.section-title__btn:hover::after{
-    /* display: block; */
-    opacity: 1;
-    transition: opacity 0.3s linear ;
-}
-.section-title__btn:hover{
-    width: 199px;
-    padding-left: 60px;
-    transition: padding-left 0.3s linear;
-}
 
 
 
@@ -210,6 +191,8 @@ body{
 }
 
 .coffee-img{
+    max-width: 100%;
+    height: auto;
     display: block;
     margin: 0 auto 10px;
     
@@ -293,18 +276,9 @@ body{
 }
 
 
-.slider-button:hover{
-    background-color: #665F55;
-    transition: background-color 0.3s linear;
-}
 
-.slider-button:hover svg path{
-    stroke: #E1D4C9;
-    transition: stroke 0.3s linear;
-};
 
 .section-about{
-    /* margin-bottom: 100px; */
     overflow: hidden;
 }
 
@@ -336,6 +310,21 @@ body{
 
 .about-photos__item{
     border-radius: 20px;
+    &.item1, &.item4{
+        aspect-ratio: 660/590;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    &.item2, &.item3{
+        aspect-ratio: 660/430;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    &.item1, &.item3{
+        margin-bottom: 40px;
+    }
 }
 
 .about-img1{
@@ -370,36 +359,33 @@ body{
     transition: transform 0.3s linear;
 }
 
-.item1{
-    overflow: hidden;
-    width: 660px;
-    height: 590px;
-    margin-bottom: 40px;
-}
+// .item1{
+//     overflow: hidden;
+//     width: 660px;
+//     height: 590px;
+//     margin-bottom: 40px;
+// }
 
-.item2{
-    overflow: hidden;
-    width: 660px;
-    height: 430px;
-}
+// .item2{
+//     overflow: hidden;
+//     width: 660px;
+//     height: 430px;
+// }
 
-.item3{
-    overflow: hidden;
-    width: 660px;
-    height: 430px;;
-    margin-bottom: 40px;
-}
+// .item3{
+//     overflow: hidden;
+//     width: 660px;
+//     height: 430px;;
+//     margin-bottom: 40px;
+// }
 
-.item4{
-    overflow: hidden;
-    width: 660px;
-    height: 590px;
-}
+// .item4{
+//     overflow: hidden;
+//     width: 660px;
+//     height: 590px;
+// }
 
-.about-img1:hover, .about-img2:hover, .about-img3:hover, .about-img4:hover{
-    transform: scale(1);
-    transition: transform 0.3s linear;
-}
+
 
 .section-mobile{
     margin-top: 100px;
@@ -506,40 +492,26 @@ body{
     transition: color 0.3s linear;
 }
 
-.google-link:hover, .apple-wrapper-link:hover{
-    background-color: #665F55;
-}
-
-.google-link:hover .google-available, .google-link:hover .google-play{
-    color: #E1D4C9;
-}
 
 
 
-.apple-wrapper-link:hover .apple-available, .apple-wrapper-link:hover .apple-store{
-    color: #E1D4C9;
-    transition: color 0.3s linear;
-}
+
 
 svg path{
     transition: fill 0.3s linear;
 }
 
-.google-link:hover svg path{
-    fill: #E1D4C9;
-    transition: fill 0.3s linear;
+
+
+.mobile-photo{
+    aspect-ratio: 630/630;
+    width: 100%;
+    height: auto;
 }
-
-.apple-wrapper-link:hover svg path{
-    fill: #E1D4C9;
-    transition: fill 0.3s linear;
-}
-
-
 
 .mobile-img{
-    max-width: 630px;
-    max-height: 630px;
+    width: 100%;
+    
 }
 
 .footer-wrapper{
@@ -627,15 +599,7 @@ svg path{
 }
 
 
-.socials-icons__item:hover{
-    background-color: #E1D4C9;
-    transition: background-color 0.3s linear;
-}
 
-.socials-icons__item:hover svg path{
-   stroke: #403F3D;
-   transition: stroke 0.3s linear;
-}
 
 .contacts-info__link:not(.schedule-link)::after{
     display: block;
@@ -647,11 +611,7 @@ svg path{
     transition: width 0.3s linear;
 }
 
-.contacts-info__link:hover::after{
-    display: block;
-    width: 100%;
-    transition: width 0.3s linear
-}
+
 
 .section-menu-title{
     margin-bottom: 38px;
@@ -759,16 +719,7 @@ svg path{
     opacity: 1;
 }
 
-.btn-coffee:hover, .btn-tea:hover, .btn-dessert:hover{
-    transition: color 0.3s linear, background-color 0.3s linear;
-    background-color: #665F55;
-    color: #E1D4C9;
-}
 
-.btn-coffee:hover .coffee-icon, .btn-tea:hover .tea-icon, .btn-dessert:hover .dessert-icon{
-    transition: background-color 0.3s linear;
-   background-color: #E1D4C9;
-}
 
 .btn-coffee-active, .btn-tea-active,.btn-dessert-active {
     transition: color 0.3s linear, background-color 0.3s linear;
@@ -799,10 +750,7 @@ svg path{
     transition: transform 0.3s linear;
 }
 
-.menu-coffee__item:hover .menu-coffee_img{
-    transform: scale(1);
-    transition: transform 0.3s linear;
-}
+
 
 .menu-coffee-description{
     max-width: 310px;
@@ -851,9 +799,7 @@ svg path{
     gap: 38px 40px;
 }
 
-.schedule-link:hover{
-   cursor: default;
-}
+
 
 .tabs-btn.btn-coffee-active{
     pointer-events: none;
@@ -880,7 +826,110 @@ svg path{
 }
 
 
+
+@media (min-width: 769px){
+    .header-nav__link:hover::after{
+        width: 100%;
+        transition: width 0.3s linear;
+    }
+    .header-menu__link:hover::after{
+        width: 70px;
+        opacity: 1;
+        left: 0;
+        transition: width 0.3s linear, left 0.3s linear, opacity 0.1s linear;
+    }
+    .section-title__btn:hover::after{
+        opacity: 1;
+        transition: opacity 0.3s linear ;
+    }
+    .section-title__btn:hover{
+        width: 199px;
+        padding-left: 60px;
+        transition: padding-left 0.3s linear;
+    }
+    .slider-button:hover{
+        background-color: #665F55;
+        transition: background-color 0.3s linear;
+    }
+    
+    .slider-button:hover svg path{
+        stroke: #E1D4C9;
+        transition: stroke 0.3s linear;
+    };
+    .about-img1:hover, .about-img2:hover, .about-img3:hover, .about-img4:hover{
+        transform: scale(1);
+        transition: transform 0.3s linear;
+    }
+    .google-link:hover, .apple-wrapper-link:hover{
+        background-color: #665F55;
+    }
+    
+    .google-link:hover .google-available, .google-link:hover .google-play{
+        color: #E1D4C9;
+    }
+    .apple-wrapper-link:hover .apple-available, .apple-wrapper-link:hover .apple-store{
+        color: #E1D4C9;
+        transition: color 0.3s linear;
+    }
+    
+    .google-link:hover svg path{
+        fill: #E1D4C9;
+        transition: fill 0.3s linear;
+    }
+
+    .apple-wrapper-link:hover svg path{
+        fill: #E1D4C9;
+        transition: fill 0.3s linear;
+    }
+    .socials-icons__item:hover{
+        background-color: #E1D4C9;
+        transition: background-color 0.3s linear;
+    }
+    
+    .socials-icons__item:hover svg path{
+       stroke: #403F3D;
+       transition: stroke 0.3s linear;
+    }
+    .contacts-info__link:hover::after{
+        display: block;
+        width: 100%;
+        transition: width 0.3s linear
+    }
+    .btn-coffee:hover, .btn-tea:hover, .btn-dessert:hover{
+        transition: color 0.3s linear, background-color 0.3s linear;
+        background-color: #665F55;
+        color: #E1D4C9;
+    }
+    
+    .btn-coffee:hover .coffee-icon, .btn-tea:hover .tea-icon, .btn-dessert:hover .dessert-icon{
+        transition: background-color 0.3s linear;
+       background-color: #E1D4C9;
+    }
+    .menu-coffee__item:hover .menu-coffee_img{
+        transform: scale(1);
+        transition: transform 0.3s linear;
+    }
+    .schedule-link:hover{
+        cursor: default;
+     }
+}
+
+
+@media (max-width: 990px){
+    .section-mobile{
+        flex-direction: column;
+    }
+    .mobile-img{
+        max-width: 630px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 768px){
+   .section-title__btn{
+
+   }
     .header-nav, .header-menu{
         display: none;
     }
@@ -899,9 +948,7 @@ svg path{
             display: none;
         }
     }
-    .section-mobile{
-        flex-direction: column;
-    }
+    
     .footer-wrapper{
         flex-direction: column;
     }
