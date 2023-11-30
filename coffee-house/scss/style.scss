@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #E1D4C9;
     font-family: 'Inter', sans-serif;
@@ -159,11 +163,10 @@ body{
 }
 
 .section-title__btn::after{
-    /* display: none; */
     content: url(../img/coffee-cup.svg);
     position: absolute;
-    top: 32%;
-    left: 60%;
+    top: 34%;
+    left: 59%;
     opacity: 0;
     transition: opacity 0.3s linear ;
 }
@@ -799,8 +802,6 @@ svg path{
     gap: 38px 40px;
 }
 
-
-
 .tabs-btn.btn-coffee-active{
     pointer-events: none;
 }
@@ -813,10 +814,9 @@ svg path{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     display: none;
 }
-
 
 .menu-button__item{
     width: 18px;
@@ -824,8 +824,6 @@ svg path{
     background-color: #403F3D;
     border-radius: 1.5px;
 }
-
-
 
 @media (min-width: 769px){
     .header-nav__link:hover::after{
@@ -924,12 +922,24 @@ svg path{
         display: block;
         margin: 0 auto;
     }
+    .footer-wrapper{
+        flex-direction: column;
+        padding: 100px 60px 105px;
+    }
+    .footer-contacts{
+        gap: 40px;
+    }
+
 }
 
 @media (max-width: 768px){
-   .section-title__btn{
-
-   }
+    .section-title__btn::after{
+        opacity: 1;
+    }
+    .section-title__btn{
+        width: 199px;
+        padding-left: 62px;
+    }
     .header-nav, .header-menu{
         display: none;
     }
@@ -949,7 +959,28 @@ svg path{
         }
     }
     
-    .footer-wrapper{
-        flex-direction: column;
+    .slider-button{
+        top: 55%;
     }
+    .slider-button-left{
+        left: 0%;
+    }
+    .slider-button-right{
+        right: 0%;
+    }
+    .about-photos__item.item1, .about-photos__item.item4 {
+        aspect-ratio: 690/590;
+        margin-bottom: 0;
+        img{
+            transform: scale(1.05);
+        }
+    }
+    .mobile-app-title{
+        gap: 42px;
+    }
+    .section-mobile{
+        margin-bottom: 41px;
+    }
+    
+    
 }

@@ -346,6 +346,10 @@ template {
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #E1D4C9;
   font-family: 'Inter', sans-serif;
@@ -508,11 +512,10 @@ body {
 }
 
 .section-title__btn::after {
-  /* display: none; */
   content: url(../img/coffee-cup.svg);
   position: absolute;
-  top: 32%;
-  left: 60%;
+  top: 34%;
+  left: 59%;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
@@ -1213,7 +1216,7 @@ svg path {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 8px;
+  gap: 6px;
   display: none;
 }
 
@@ -1357,8 +1360,29 @@ svg path {
     display: block;
     margin: 0 auto;
   }
+
+  .footer-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 100px 60px 105px;
+  }
+
+  .footer-contacts {
+    gap: 40px;
+  }
 }
 @media (max-width: 768px) {
+  .section-title__btn::after {
+    opacity: 1;
+  }
+
+  .section-title__btn {
+    width: 199px;
+    padding-left: 62px;
+  }
+
   .header-nav, .header-menu {
     display: none;
   }
@@ -1389,10 +1413,32 @@ svg path {
     display: none;
   }
 
-  .footer-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .slider-button {
+    top: 55%;
+  }
+
+  .slider-button-left {
+    left: 0%;
+  }
+
+  .slider-button-right {
+    right: 0%;
+  }
+
+  .about-photos__item.item1, .about-photos__item.item4 {
+    aspect-ratio: 690/590;
+    margin-bottom: 0;
+  }
+  .about-photos__item.item1 img, .about-photos__item.item4 img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+
+  .mobile-app-title {
+    gap: 42px;
+  }
+
+  .section-mobile {
+    margin-bottom: 41px;
   }
 }
