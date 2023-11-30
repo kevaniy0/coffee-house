@@ -840,7 +840,7 @@ svg path{
     }
 }
 
-@media (min-width: 769px){
+@media (hover: hover){
     .header-nav__link:hover::after{
         width: 100%;
         transition: width 0.3s linear;

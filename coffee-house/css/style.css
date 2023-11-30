@@ -1243,7 +1243,7 @@ svg path {
           transform: translate(-50%, -50%);
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
   .header-nav__link:hover::after {
     width: 100%;
     -webkit-transition: width 0.3s linear;
