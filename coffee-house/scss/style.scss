@@ -825,6 +825,21 @@ svg path{
     border-radius: 1.5px;
 }
 
+.menu-show-button{
+    display: none;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 100px;
+    border: 1px solid #665F55;
+    margin: 0 auto;
+    position: relative;
+    object{
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+}
+
 @media (min-width: 769px){
     .header-nav__link:hover::after{
         width: 100%;
@@ -912,6 +927,20 @@ svg path{
      }
 }
 
+@media (max-width: 1439px){
+    .menu-coffee{
+        grid-template-columns: repeat(3, 310px);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1090px){
+    .menu-coffee{
+        grid-template-columns: repeat(2, 310px);
+        justify-content: center;
+    }
+}
+
 
 @media (max-width: 990px){
     .section-mobile{
@@ -982,5 +1011,13 @@ svg path{
         margin-bottom: 41px;
     }
     
-    
+    .menu-coffee{
+        margin-bottom: 40px;
+        .menu-coffee__item:nth-child(n + 5){
+            display: none;
+        }
+    }
+    .menu-show-button{
+        display: block;
+    }
 }
