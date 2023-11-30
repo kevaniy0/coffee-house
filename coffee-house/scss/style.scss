@@ -506,16 +506,7 @@ svg path{
 
 
 
-.mobile-photo{
-    aspect-ratio: 630/630;
-    width: 100%;
-    height: auto;
-}
 
-.mobile-img{
-    width: 100%;
-    
-}
 
 .footer-wrapper{
     padding: 100px;
@@ -934,6 +925,12 @@ svg path{
     }
 }
 
+@media (max-width: 1300px){
+    .mobile-img{
+        width: 100%;
+    }
+}
+
 @media (max-width: 1090px){
     .menu-coffee{
         grid-template-columns: repeat(2, 310px);
@@ -948,6 +945,7 @@ svg path{
     }
     .mobile-img{
         max-width: 630px;
+        max-height: 630px;
         display: block;
         margin: 0 auto;
     }
@@ -1098,6 +1096,16 @@ svg path{
     .section-mobile{
         gap: 40px;
         margin-bottom: 100px;
+    }
+    .mobile-photo{
+        aspect-ratio: 630/630;
+        width: 100%;
+        height: auto;
+    }
+    
+    .mobile-img{
+        width: 100%;
+        
     }
     .footer-wrapper{
         padding: 60px 16px 65px;
