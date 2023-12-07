@@ -409,7 +409,6 @@ body {
 .header-menu {
   -ms-flex-item-align: center;
       align-self: center;
-  /* margin-right: 28px; */
   position: relative;
 }
 
@@ -446,6 +445,8 @@ body {
 
 .header-logo {
   height: 60px;
+  position: relative;
+  z-index: 5;
 }
 
 .section-title {
@@ -655,10 +656,6 @@ body {
 .about-span {
   font-style: italic;
   color: #B0907A;
-}
-
-.relax-span {
-  /* word-spacing: -4px; */
 }
 
 .about-photos {
@@ -1099,6 +1096,8 @@ svg path {
   height: 2px;
   background-color: #403F3D;
   opacity: 1;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .btn-coffee-active, .btn-tea-active, .btn-dessert-active {
@@ -1208,13 +1207,33 @@ svg path {
           align-items: center;
   gap: 6px;
   display: none;
+  position: relative;
+  z-index: 5;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .menu-button__item {
+  position: absolute;
+  display: block;
   width: 18px;
   height: 2px;
   background-color: #403F3D;
   border-radius: 1.5px;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.menu-button__item:first-child {
+  top: calc(50% - 5px);
+  left: 12px;
+}
+
+.menu-button__item:nth-child(2) {
+  top: calc(50% + 3px);
+  left: 12px;
 }
 
 .menu-show-button {
@@ -1402,6 +1421,10 @@ svg path {
   }
 }
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .section-title__btn::after {
     opacity: 1;
   }
@@ -1411,14 +1434,126 @@ svg path {
     padding-left: 62px;
   }
 
-  .header-nav, .header-menu {
-    display: none;
+  .header-menu-wrapper {
+    position: absolute;
+    left: 150%;
+    top: 601px;
+    z-index: 2;
+    -webkit-transition: left 0.3s linear;
+    transition: left 0.3s linear;
+  }
+
+  .header-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transition: left 0.3s linear;
+    transition: left 0.3s linear;
+  }
+  .header-menu .header-menu__link {
+    display: block;
+    width: 136px;
+    font-size: 32px;
+    color: #403F3D;
+    line-height: 125%;
+    font-weight: 600;
+    font-family: Inter;
+  }
+  .header-menu .header-menu__link::before {
+    content: "";
+    background-image: url(../img/coffee-cup.svg);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    left: 74%;
+  }
+  .header-menu .header-menu__link::after {
+    top: 37px;
+    left: 59px;
+  }
+  .header-menu .menu-page__link::after {
+    top: 40px;
+    left: 0;
+    width: 139px;
+  }
+}
+@media (max-width: 768px) and (hover: hover) {
+  .header-menu .header-menu__link:hover::after {
+    width: 150px;
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-menu--burger {
+    left: calc(50% - 70px);
+  }
+
+  .header-nav {
+    position: absolute;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+  }
+
+  .nav-list {
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 60px;
+    margin: 0;
+    padding-top: 159px;
+    top: 0;
+    left: 150%;
+    right: 0;
+    bottom: 0;
+    background-color: #E1D4C9;
+    -webkit-transition: left 0.3s linear;
+    transition: left 0.3s linear;
+    z-index: 2;
+  }
+  .nav-list .nav-list__item {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .nav-list .nav-list__item .header-nav__link {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+    color: #403F3D;
+  }
+
+  .nav-list-open {
+    left: 0;
+  }
+
+  .disable-scroll {
+    overflow: hidden;
   }
 
   .menu-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    position: relative;
+    display: block;
+  }
+
+  .menu-button--open .menu-button__item:first-child {
+    -webkit-transform: rotate(45deg) translate(3px, 3px);
+            transform: rotate(45deg) translate(3px, 3px);
+  }
+  .menu-button--open .menu-button__item:nth-child(2) {
+    -webkit-transform: rotate(-45deg) translate(3px, -3px);
+            transform: rotate(-45deg) translate(3px, -3px);
   }
 
   .header-items {
@@ -1467,7 +1602,7 @@ svg path {
   }
 
   .section-mobile {
-    margin-bottom: 100px;
+    margin-bottom: 41px;
   }
 
   .menu-coffee {
