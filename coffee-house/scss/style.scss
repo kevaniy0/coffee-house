@@ -239,6 +239,24 @@ body{
 }
 
 
+
+.slider-wrapper{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.slider-common-wrapper{
+    display: flex;
+    transition: transform 0.7s linear;
+}
+
+.coffee-slider-wrapper{
+    width: 100%;
+    flex-shrink: 0;
+}
+
+
+
 .slider-items{
     display: flex;
     justify-content: center;
@@ -280,6 +298,13 @@ body{
 .slider-button svg path{
     transition: stroke 0.3s linear;
 }
+
+
+.coffee-slider-wrapper{
+    transition: transform 0.7s linear;
+}
+
+
 
 .section-about{
     overflow: hidden;

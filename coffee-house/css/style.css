@@ -588,6 +588,27 @@ body {
   margin-bottom: 40px;
 }
 
+.slider-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.slider-common-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.7s linear;
+  transition: -webkit-transform 0.7s linear;
+  transition: transform 0.7s linear;
+  transition: transform 0.7s linear, -webkit-transform 0.7s linear;
+}
+
+.coffee-slider-wrapper {
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
 .slider-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -634,6 +655,13 @@ body {
 .slider-button svg path {
   -webkit-transition: stroke 0.3s linear;
   transition: stroke 0.3s linear;
+}
+
+.coffee-slider-wrapper {
+  -webkit-transition: -webkit-transform 0.7s linear;
+  transition: -webkit-transform 0.7s linear;
+  transition: transform 0.7s linear;
+  transition: transform 0.7s linear, -webkit-transform 0.7s linear;
 }
 
 .section-about {
