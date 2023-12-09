@@ -457,7 +457,6 @@ body {
   max-width: 100%;
   padding: 100px;
   border-radius: 40px;
-  /* margin-bottom: 100px; */
 }
 
 .title-wrapper {
@@ -620,7 +619,8 @@ body {
   gap: 12px;
 }
 
-.slider-span {
+.slider-span-wrapper {
+  position: relative;
   width: 40px;
   height: 4px;
   border: none;
@@ -628,8 +628,15 @@ body {
   background-color: #C1B6AD;
 }
 
-.slider-span-active {
+.slider-span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0px;
+  height: 4px;
   background-color: #665F55;
+  border: none;
+  border-radius: 100px;
 }
 
 .slider-button {

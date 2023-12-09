@@ -4,8 +4,8 @@ const header = document.querySelector('header');
 const menuButton = document.querySelector('.menu-button');
 const sliderSection = document.querySelector('.section-favorite');
 const btns = document.querySelectorAll('.slider-button');
-const sliderWrapper = document.querySelector('.slider-wrapper')
-let indexImg = 1;
+const sliderWrapper = document.querySelector('.slider-wrapper');
+
 let sliderPosition = 0;
 let timer = 5000;
 let interval;
@@ -13,18 +13,22 @@ let remain = timer;
 let startTime;
 let touchStart;
 let touchEnd;
+let spanWidth = '40px';
+let spanCurrentWidth = spanWidth;
+
+
+
+
 
 
 
 header.addEventListener('click', function(event){
     if (menuButton.contains(event.target)){
-        
         openBurger();
     }
     if (document.querySelector('.nav-list').classList.contains('nav-list-open') 
     && event.target.classList.contains('header-nav__link')){
         openBurger();
-        
     }
 })
 
@@ -61,9 +65,13 @@ function changeCurrentPosition(){
     startTime = Date.now();
     remain = timer;
     interval = setInterval(showNextSlide, remain);
-    document.querySelector('.slider-span-active').classList.remove('slider-span-active');
-    document.querySelector(`.slider-span-${sliderPosition + 1}`).classList.add('slider-span-active');
 
+    document.querySelector(`.slider-span-active`).style.width = 0;
+    document.querySelector(`.slider-span-active`).style.transitionDuration = '0.5s';
+    document.querySelector(`.slider-span-active`).classList.remove('slider-span-active');
+    document.querySelector(`.slider-span-${sliderPosition + 1}`).classList.add('slider-span-active');
+    
+    startProgressBar();
 }
 
 function showNextSlide(){
@@ -84,7 +92,7 @@ function showPrevSlide(){
 
 
 function runInterval(){
-    interval = setInterval(showNextSlide, remain)
+    interval = setInterval(showNextSlide, remain);
     startTime = Date.now();
     if (touchEnd < touchStart) showNextSlide();
     if (touchEnd > touchStart) showPrevSlide();
@@ -93,7 +101,16 @@ function runInterval(){
 function pauseInterval(){
     clearInterval(interval);
     remain = remain - (Date.now() - startTime);
+    spanCurrentWidth = (40 -  (40 / 5000) * remain).toFixed(1) + 'px';
+    document.querySelector(`.slider-span-active`).style.transition = 'none';
+    document.querySelector(`.slider-span-active`).style.width = spanCurrentWidth;  
 }
+
+function startProgressBar(){
+    document.querySelector(`.slider-span-active`).style.width = '40px';
+    document.querySelector(`.slider-span-active`).style.transition = `width ${(remain / 1000).toFixed(1)}s linear`;
+}
+
 
 
 sliderWrapper.addEventListener('mouseenter', function(event){
@@ -101,6 +118,7 @@ sliderWrapper.addEventListener('mouseenter', function(event){
 })
 
 sliderWrapper.addEventListener('mouseleave', function(event){
+    startProgressBar();
         runInterval();
 })
 
@@ -113,8 +131,10 @@ sliderWrapper.addEventListener('touchstart', function(event){
 
 sliderWrapper.addEventListener('touchend', function(event){
     touchEnd = event.changedTouches[0].clientX;
+    startProgressBar();
     runInterval();
 });
 
 
 runInterval();
+startProgressBar();
