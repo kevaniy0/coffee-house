@@ -4,7 +4,7 @@ const header = document.querySelector('header');
 const menuButton = document.querySelector('.menu-button');
 const sliderSection = document.querySelector('.section-favorite');
 const btns = document.querySelectorAll('.slider-button');
-const sliderWrappers = document.querySelectorAll('.coffee-slider-wrapper');
+const sliderWrapper = document.querySelector('.slider-wrapper')
 let indexImg = 1;
 let sliderPosition = 0;
 let timer = 5000;
@@ -93,14 +93,13 @@ function pauseInterval(){
 }
 
 
-sliderSection.addEventListener('mouseenter', function(){
-    pauseInterval();
+sliderWrapper.addEventListener('mouseenter', function(event){
+        pauseInterval();
 })
 
-sliderSection.addEventListener('mouseleave', function(){
-    runInterval();
+sliderWrapper.addEventListener('mouseleave', function(event){
+        runInterval();
 })
-
 
 
 runInterval();

@@ -241,13 +241,15 @@ body{
 
 
 .slider-wrapper{
-    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
     overflow-x: hidden;
 }
 
 .slider-common-wrapper{
     display: flex;
     transition: transform 0.7s linear;
+    
 }
 
 .coffee-slider-wrapper{
@@ -298,6 +300,7 @@ body{
 .slider-button svg path{
     transition: stroke 0.3s linear;
 }
+
 
 
 .coffee-slider-wrapper{
@@ -1214,6 +1217,11 @@ svg path{
     .slider-button{
         display: none;
     }
+
+    .slider-wrapper{
+        max-width: 380px;
+    }
+
     .favorite-description {
         margin-top: 21px;
     }

@@ -589,7 +589,8 @@ body {
 }
 
 .slider-wrapper {
-  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
   overflow-x: hidden;
 }
 
@@ -1694,6 +1695,10 @@ svg path {
 
   .slider-button {
     display: none;
+  }
+
+  .slider-wrapper {
+    max-width: 380px;
   }
 
   .favorite-description {
