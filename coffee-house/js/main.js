@@ -11,7 +11,8 @@ let timer = 5000;
 let interval;
 let remain = timer;
 let startTime;
-
+let touchStart;
+let touchEnd;
 
 
 
@@ -85,6 +86,8 @@ function showPrevSlide(){
 function runInterval(){
     interval = setInterval(showNextSlide, remain)
     startTime = Date.now();
+    if (touchEnd < touchStart) showNextSlide();
+    if (touchEnd > touchStart) showPrevSlide();
 }
 
 function pauseInterval(){
@@ -100,6 +103,18 @@ sliderWrapper.addEventListener('mouseenter', function(event){
 sliderWrapper.addEventListener('mouseleave', function(event){
         runInterval();
 })
+
+
+sliderWrapper.addEventListener('touchstart', function(event){
+    touchStart = event.changedTouches[0].clientX;
+    pauseInterval();
+});
+
+
+sliderWrapper.addEventListener('touchend', function(event){
+    touchEnd = event.changedTouches[0].clientX;
+    runInterval();
+});
 
 
 runInterval();
