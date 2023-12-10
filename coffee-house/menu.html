@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
     <link rel="icon" type="image/png" href="./img/favicon.png" >
-    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Coffee-House</title>
 </head>
@@ -47,7 +46,7 @@
                 <h1 class="menu-title">Behind each of our cups hides an <span class="menu-span">amazing surprise</span>
                 </h1>
                 <div class="menu-tabs">
-                    <button class="tabs-btn btn-coffee btn-coffee-active">
+                    <button class="tabs-btn btn-coffee tabs-btn--active">
                         <img class="coffee-icon" src="./img/coffee-icon.svg" alt="coffee-icon">
                         Coffee</button>
                     <button class="tabs-btn btn-tea">
@@ -59,89 +58,90 @@
                 </div>
             </section>
             <section class="section-menu-gallery">
-                <div class="menu-coffee">
-                    <div class="menu-coffee__item">
-                        <div class="menu-coffee-wrapper">
-                            <img class="menu-coffee_img" src="./img/coffee-1.png" alt="Irish coffee" >
+                <div class="menu-gallery">
+                    <!-- <div class="menu-gallery__item">
+                        <div class="menu-gallery-wrapper">
+                            <img class="menu-item_img" src="./img/coffee-1.png" alt="Irish coffee" >
                         </div>
-                        <div class="menu-coffee-description">
-                            <h3 class="coffee-title-h3">Irish coffee</h3>
-                            <p class="coffee-description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-                            <div class="coffee-price">$7.00</div>
-                        </div>
-                    </div>
-                    <div class="menu-coffee__item">
-                        <div class="menu-coffee-wrapper">
-                            <img class="menu-coffee_img" src="./img/coffee-2.png" alt="Kahlua coffee" >
-                        </div>
-                        <div class="menu-coffee-description">
-                            <h3 class="coffee-title-h3">Kahlua coffee</h3>
-                            <p class="coffee-description">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
-                            <div class="coffee-price">$7.00</div>
+                        <div class="menu-item-description">
+                            <h3 class="product-title-h3">Irish coffee</h3>
+                            <p class="product-description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                            <div class="product-price">$7.00</div>
                         </div>
                     </div>
-                    <div class="menu-coffee__item">
-                        <div class="menu-coffee-wrapper">
-                            <img class="menu-coffee_img" src="./img/coffee-3.png" alt="Honey raf" >
+                    <div class="menu-gallery__item">
+                        <div class="menu-gallery-wrapper">
+                            <img class="menu-item_img" src="./img/coffee-2.png" alt="Kahlua coffee" >
                         </div>
-                        <div class="menu-coffee-description">
-                            <h3 class="coffee-title-h3">Honey raf</h3>
-                            <p class="coffee-description">Espresso with frothed milk, cream and aromatic honey</p>
-                            <div class="coffee-price">$5.50</div>
-                        </div>
-                    </div>
-                    <div class="menu-coffee__item">
-                        <div class="menu-coffee-wrapper">
-                            <img class="menu-coffee_img" src="./img/coffee-4.png" alt="Ice cappuccino" >
-                        </div>
-                        <div class="menu-coffee-description">
-                            <h3 class="coffee-title-h3">Ice cappuccino</h3>
-                            <p class="coffee-description">Cappuccino with soft thick foam in summer version with ice</p>
-                            <div class="coffee-price">$5.00</div>
+                        <div class="menu-item-description">
+                            <h3 class="product-title-h3">Kahlua coffee</h3>
+                            <p class="product-description">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+                            <div class="product-price">$7.00</div>
                         </div>
                     </div>
-                    <div class="menu-coffee__item">
-                        <div class="menu-coffee-wrapper">
-                            <img class="menu-coffee_img" src="./img/coffee-5.png" alt="Espresso" >
+                    <div class="menu-gallery__item">
+                        <div class="menu-gallery-wrapper">
+                            <img class="menu-item_img" src="./img/coffee-3.png" alt="Honey raf" >
                         </div>
-                        <div class="menu-coffee-description">
-                            <h3 class="coffee-title-h3">Espresso</h3>
-                            <p class="coffee-description">Classic black coffee</p>
-                            <div class="coffee-price">$4.50</div>
-                        </div>
-                    </div>
-                    <div class="menu-coffee__item">
-                        <div class="menu-coffee-wrapper">
-                            <img class="menu-coffee_img" src="./img/coffee-6.png" alt="Latte" >
-                        </div>
-                        <div class="menu-coffee-description">
-                            <h3 class="coffee-title-h3">Latte</h3>
-                            <p class="coffee-description">Espresso coffee with the addition of steamed milk and dense milk foam</p>
-                            <div class="coffee-price">$5.50</div>
+                        <div class="menu-item-description">
+                            <h3 class="product-title-h3">Honey raf</h3>
+                            <p class="product-description">Espresso with frothed milk, cream and aromatic honey</p>
+                            <div class="product-price">$5.50</div>
                         </div>
                     </div>
-                    <div class="menu-coffee__item">
-                        <div class="menu-coffee-wrapper">
-                            <img class="menu-coffee_img" src="./img/coffee-7.png" alt="Latte macchiato" >
+                    <div class="menu-gallery__item">
+                        <div class="menu-gallery-wrapper">
+                            <img class="menu-item_img" src="./img/coffee-4.png" alt="Ice cappuccino" >
                         </div>
-                        <div class="menu-coffee-description">
-                            <h3 class="coffee-title-h3">Latte macchiato</h3>
-                            <p class="coffee-description">Espresso with frothed milk and chocolate</p>
-                            <div class="coffee-price">$5.50</div>
-                        </div>
-                    </div>
-                    <div class="menu-coffee__item">
-                        <div class="menu-coffee-wrapper">
-                            <img class="menu-coffee_img" src="./img/coffee-8.png" alt="Coffee with cognac" >
-                        </div>
-                        <div class="menu-coffee-description">
-                            <h3 class="coffee-title-h3">Coffee with cognac</h3>
-                            <p class="coffee-description">Fragrant black coffee with cognac and whipped cream</p>
-                            <div class="coffee-price">$6.50</div>
+                        <div class="menu-item-description">
+                            <h3 class="product-title-h3">Ice cappuccino</h3>
+                            <p class="product-description">Cappuccino with soft thick foam in summer version with ice</p>
+                            <div class="product-price">$5.00</div>
                         </div>
                     </div>
+                    <div class="menu-gallery__item">
+                        <div class="menu-gallery-wrapper">
+                            <img class="menu-item_img" src="./img/coffee-5.png" alt="Espresso" >
+                        </div>
+                        <div class="menu-item-description">
+                            <h3 class="product-title-h3">Espresso</h3>
+                            <p class="product-description">Classic black coffee</p>
+                            <div class="product-price">$4.50</div>
+                        </div>
+                    </div>
+                    <div class="menu-gallery__item">
+                        <div class="menu-gallery-wrapper">
+                            <img class="menu-item_img" src="./img/coffee-6.png" alt="Latte" >
+                        </div>
+                        <div class="menu-item-description">
+                            <h3 class="product-title-h3">Latte</h3>
+                            <p class="product-description">Espresso coffee with the addition of steamed milk and dense milk foam</p>
+                            <div class="product-price">$5.50</div>
+                        </div>
+                    </div>
+                    <div class="menu-gallery__item">
+                        <div class="menu-gallery-wrapper">
+                            <img class="menu-item_img" src="./img/coffee-7.png" alt="Latte macchiato" >
+                        </div>
+                        <div class="menu-item-description">
+                            <h3 class="product-title-h3">Latte macchiato</h3>
+                            <p class="product-description">Espresso with frothed milk and chocolate</p>
+                            <div class="product-price">$5.50</div>
+                        </div>
+                    </div>
+                    <div class="menu-gallery__item">
+                        <div class="menu-gallery-wrapper">
+                            <img class="menu-item_img" src="./img/coffee-8.png" alt="Coffee with cognac" >
+                        </div>
+                        <div class="menu-item-description">
+                            <h3 class="product-title-h3">Coffee with cognac</h3>
+                            <p class="product-description">Fragrant black coffee with cognac and whipped cream</p>
+                            <div class="product-price">$6.50</div>
+                        </div>
+                    </div> -->
                 </div>
                 <button class="menu-show-button" type="button">
+                    <div class="wrapper-svg"></div>
                     <object data="./img/refresh.svg" type="image/svg+xml"></object>
                 </button>
             </section>
@@ -207,6 +207,6 @@
             </div>
         </div>
     </footer>
-    <script src="./js/main.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>

@@ -735,13 +735,14 @@ svg path{
 
 
 
-.btn-coffee-active, .btn-tea-active,.btn-dessert-active {
+.tabs-btn--active{
     transition: color 0.3s linear, background-color 0.3s linear;
     background-color: #665F55;
     color: #E1D4C9;
+    pointer-events: none;
 }
 
-.btn-coffee-active .coffee-icon, .btn-tea-active .tea-icon, .btn-dessert-active .dessert-icon {
+.tabs-btn--active .coffee-icon, .tabs-btn--active .tea-icon, .tabs-btn--active .dessert-icon {
     transition: background-color 0.3s linear;
     background-color: #E1D4C9;
 }
@@ -750,14 +751,14 @@ svg path{
     margin-bottom: 98px;
 }
 
-.menu-coffee-wrapper{
+.menu-gallery-wrapper{
     width: 310px;
     height: 310px;
     overflow: hidden;
     border-radius: 40px;
 }
 
-.menu-coffee_img{
+.menu-item_img{
     width: 100%;
     height: 100%;
     transform: scale(1.1);
@@ -766,7 +767,7 @@ svg path{
 
 
 
-.menu-coffee-description{
+.menu-item-description{
     max-width: 310px;
     height: 196px;
     padding: 20px;
@@ -775,7 +776,7 @@ svg path{
     
 }
 
-.coffee-title-h3{
+.product-title-h3{
     padding: 0;
     margin: 0;
     color: #403F3D;
@@ -785,7 +786,7 @@ svg path{
     margin-bottom: 12px;
 }
 
-.coffee-description{
+.product-description{
     margin: 0;
     padding: 0;
     color: #403F3D;
@@ -795,19 +796,19 @@ svg path{
     margin-bottom: auto;
 }
 
-.coffee-price{
+.product-price{
     font-size: 24px;
     color: #403F3D;
     font-weight: 600;
     line-height: 125%; 
 }
 
-.menu-coffee__item{
+.menu-gallery__item{
     border: 1px solid #C1B6AD;
     border-radius: 40px;
 }
 
-.menu-coffee{
+.menu-gallery{
     display: grid;
     grid-template-columns: repeat(4, 310px);
     gap: 38px 40px;
@@ -865,7 +866,21 @@ svg path{
         position: absolute;
         transform: translate(-50%, -50%);
     }
+    @media (hover: hover){
+        cursor: pointer;   
+    }
 }
+
+.wrapper-svg{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 5;
+}
+
 
 @media (hover: hover){
     .header-nav__link:hover::after{
@@ -945,7 +960,7 @@ svg path{
         transition: background-color 0.3s linear;
        background-color: #E1D4C9;
     }
-    .menu-coffee__item:hover .menu-coffee_img{
+    .menu-gallery__item:hover .menu-item_img{
         transform: scale(1);
         transition: transform 0.3s linear;
     }
@@ -955,7 +970,7 @@ svg path{
 }
 
 @media (max-width: 1439px){
-    .menu-coffee{
+    .menu-gallery{
         grid-template-columns: repeat(3, 310px);
         justify-content: center;
     }
@@ -968,7 +983,7 @@ svg path{
 }
 
 @media (max-width: 1090px){
-    .menu-coffee{
+    .menu-gallery{
         grid-template-columns: repeat(2, 310px);
         justify-content: center;
     }
@@ -1060,6 +1075,7 @@ svg path{
         
     }
     .header-menu--burger{
+        // z-index: 4;
         left: calc(50% - 70px);
     }
 
@@ -1070,6 +1086,7 @@ svg path{
         height: 100vh;
         top: 0px;
         left: 0px;
+        // z-index: 4;
     }
     
     .nav-list{ 
@@ -1106,6 +1123,9 @@ svg path{
     }
 
     .menu-button{
+        @media (hover: hover){
+            cursor: pointer;
+        }
         position: relative;
         display: block;
     }
@@ -1155,9 +1175,9 @@ svg path{
         margin-bottom: 41px;
     }
     
-    .menu-coffee{
+    .menu-gallery{
         margin-bottom: 40px;
-        .menu-coffee__item:nth-child(n + 5){
+        .menu-gallery__item:nth-child(n + 5){
             display: none;
         }
     }
@@ -1177,13 +1197,13 @@ svg path{
         font-size: 32px;
         line-height: 125%;
     }
-    .menu-coffee{
+    .menu-gallery{
         gap: 20px 20px;
     }
 }
 
 @media (max-width: 680px){
-    .menu-coffee{
+    .menu-gallery{
         grid-template-columns: 310px;
         gap: 38px;
     }

@@ -1150,14 +1150,15 @@ svg path {
   transition: none;
 }
 
-.btn-coffee-active, .btn-tea-active, .btn-dessert-active {
+.tabs-btn--active {
   -webkit-transition: color 0.3s linear, background-color 0.3s linear;
   transition: color 0.3s linear, background-color 0.3s linear;
   background-color: #665F55;
   color: #E1D4C9;
+  pointer-events: none;
 }
 
-.btn-coffee-active .coffee-icon, .btn-tea-active .tea-icon, .btn-dessert-active .dessert-icon {
+.tabs-btn--active .coffee-icon, .tabs-btn--active .tea-icon, .tabs-btn--active .dessert-icon {
   -webkit-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
   background-color: #E1D4C9;
@@ -1167,14 +1168,14 @@ svg path {
   margin-bottom: 98px;
 }
 
-.menu-coffee-wrapper {
+.menu-gallery-wrapper {
   width: 310px;
   height: 310px;
   overflow: hidden;
   border-radius: 40px;
 }
 
-.menu-coffee_img {
+.menu-item_img {
   width: 100%;
   height: 100%;
   -webkit-transform: scale(1.1);
@@ -1185,7 +1186,7 @@ svg path {
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
-.menu-coffee-description {
+.menu-item-description {
   max-width: 310px;
   height: 196px;
   padding: 20px;
@@ -1198,7 +1199,7 @@ svg path {
           flex-direction: column;
 }
 
-.coffee-title-h3 {
+.product-title-h3 {
   padding: 0;
   margin: 0;
   color: #403F3D;
@@ -1208,7 +1209,7 @@ svg path {
   margin-bottom: 12px;
 }
 
-.coffee-description {
+.product-description {
   margin: 0;
   padding: 0;
   color: #403F3D;
@@ -1218,19 +1219,19 @@ svg path {
   margin-bottom: auto;
 }
 
-.coffee-price {
+.product-price {
   font-size: 24px;
   color: #403F3D;
   font-weight: 600;
   line-height: 125%;
 }
 
-.menu-coffee__item {
+.menu-gallery__item {
   border: 1px solid #C1B6AD;
   border-radius: 40px;
 }
 
-.menu-coffee {
+.menu-gallery {
   display: grid;
   grid-template-columns: repeat(4, 310px);
   gap: 38px 40px;
@@ -1300,6 +1301,21 @@ svg path {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+@media (hover: hover) {
+  .menu-show-button {
+    cursor: pointer;
+  }
+}
+
+.wrapper-svg {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 5;
 }
 
 @media (hover: hover) {
@@ -1409,7 +1425,7 @@ svg path {
     background-color: #E1D4C9;
   }
 
-  .menu-coffee__item:hover .menu-coffee_img {
+  .menu-gallery__item:hover .menu-item_img {
     -webkit-transform: scale(1);
             transform: scale(1);
     -webkit-transition: -webkit-transform 0.3s linear;
@@ -1423,7 +1439,7 @@ svg path {
   }
 }
 @media (max-width: 1439px) {
-  .menu-coffee {
+  .menu-gallery {
     grid-template-columns: repeat(3, 310px);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1436,7 +1452,7 @@ svg path {
   }
 }
 @media (max-width: 1090px) {
-  .menu-coffee {
+  .menu-gallery {
     grid-template-columns: repeat(2, 310px);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1596,7 +1612,14 @@ svg path {
     position: relative;
     display: block;
   }
+}
+@media (max-width: 768px) and (hover: hover) {
+  .menu-button {
+    cursor: pointer;
+  }
+}
 
+@media (max-width: 768px) {
   .menu-button--open .menu-button__item:first-child {
     -webkit-transform: rotate(45deg) translate(3px, 3px);
             transform: rotate(45deg) translate(3px, 3px);
@@ -1655,10 +1678,10 @@ svg path {
     margin-bottom: 41px;
   }
 
-  .menu-coffee {
+  .menu-gallery {
     margin-bottom: 40px;
   }
-  .menu-coffee .menu-coffee__item:nth-child(n + 5) {
+  .menu-gallery .menu-gallery__item:nth-child(n + 5) {
     display: none;
   }
 
@@ -1680,12 +1703,12 @@ svg path {
     line-height: 125%;
   }
 
-  .menu-coffee {
+  .menu-gallery {
     gap: 20px 20px;
   }
 }
 @media (max-width: 680px) {
-  .menu-coffee {
+  .menu-gallery {
     grid-template-columns: 310px;
     gap: 38px;
   }

@@ -18,10 +18,6 @@ let spanCurrentWidth = spanWidth;
 
 
 
-
-
-
-
 header.addEventListener('click', function(event){
     if (menuButton.contains(event.target)){
         openBurger();
@@ -38,9 +34,14 @@ function openBurger(){
     document.body.classList.toggle('disable-scroll');
     window.scrollBy(0, -100);
     
+    
     if (document.querySelector('.nav-list-open')) {
+        document.querySelector('.header-nav').style.zIndex = 4;
+        document.querySelector('.header-menu-wrapper').style.zIndex = 4;
         document.querySelector('.menu-button').classList.add('menu-button--open');
     }else{
+        document.querySelector('.header-nav').style.zIndex = 1;
+        document.querySelector('.header-menu-wrapper').style.zIndex = 1;
         document.querySelector('.menu-button').classList.remove('menu-button--open');
     }
     
@@ -138,3 +139,5 @@ sliderWrapper.addEventListener('touchend', function(event){
 
 runInterval();
 startProgressBar();
+
+
